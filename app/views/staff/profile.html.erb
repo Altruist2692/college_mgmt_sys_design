@@ -1,0 +1,166 @@
+
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Profile</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a>Extra Pages</a>
+      </li>
+      <li class="active">
+        <strong>Profile</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2">
+
+  </div>
+</div>
+<div class="wrapper wrapper-content">
+  <div class="row animated fadeInRight">
+    <div class="col-md-4">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Profile Detail</h5>
+        </div>
+        <div>
+          <div class="ibox-content no-padding border-left-right">
+            <img alt="image" class="img-responsive" src="<%= image_path('profile_big.jpg') %>">
+          </div>
+          <div class="ibox-content profile-content">
+            <h4><strong>Dev Daxesh</strong></h4>
+            <p><i class="fa fa-map-marker"></i> Developer</p>
+            <p><i class="fa fa-google-plus"></i> Email: nish@mail.com</p>
+            <p><i class="fa fa-phone"></i> 9023902342</p>
+            <h5>
+              About me
+            </h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>To-do</h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <p class="small"><i class="fa fa-hand-o-up"></i> Drag task between list</p>
+
+          <div class="input-group">
+            <input type="text" placeholder="Add new task. " class="input input-sm form-control">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-sm btn-white"> <i class="fa fa-plus"></i> Add task</button>
+                        </span>
+          </div>
+
+          <ul class="sortable-list connectList agile-list">
+            <li class="warning-element">
+              Simply dummy text of the printing and typesetting industry.
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                <i class="fa fa-clock-o"></i> 12.10.2015
+              </div>
+            </li>
+            <li class="success-element">
+              Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                <i class="fa fa-clock-o"></i> 05.04.2015
+              </div>
+            </li>
+            <li class="info-element">
+              Sometimes by accident, sometimes on purpose (injected humour and the like).
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                <i class="fa fa-clock-o"></i> 16.11.2015
+              </div>
+            </li>
+            <li class="danger-element">
+              All the Lorem Ipsum generators
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-primary">Done</a>
+                <i class="fa fa-clock-o"></i> 06.10.2015
+              </div>
+            </li>
+            <li class="warning-element">
+              Which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-white">Tag</a>
+                <i class="fa fa-clock-o"></i> 09.12.2015
+              </div>
+            </li>
+            <li class="warning-element">
+              Packages and web page editors now use Lorem Ipsum as
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-primary">Done</a>
+                <i class="fa fa-clock-o"></i> 08.04.2015
+              </div>
+            </li>
+            <li class="success-element">
+              Many desktop publishing packages and web page editors now use Lorem Ipsum as their default.
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                <i class="fa fa-clock-o"></i> 05.04.2015
+              </div>
+            </li>
+            <li class="info-element">
+              Sometimes by accident, sometimes on purpose (injected humour and the like).
+              <div class="agile-detail">
+                <a href="#" class="pull-right btn btn-xs btn-white">Mark</a>
+                <i class="fa fa-clock-o"></i> 16.11.2015
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<% content_for :javascript do %>
+
+    <script type="text/javascript">
+
+
+        $(function() {
+
+            $("span.pie").peity("pie", {
+                fill: ['#1ab394', '#d7d7d7', '#ffffff']
+            })
+
+            $(".line").peity("line", {
+                fill: '#1ab394',
+                stroke: '#169c81',
+            })
+
+            $(".bar").peity("bar", {
+                fill: ["#1ab394", "#d7d7d7"]
+            })
+
+
+        });
+
+    </script>
+
+<% end %>
+

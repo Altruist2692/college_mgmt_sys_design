@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails inspinia-rails-seed-master_modify: development" uuid="072f8b34-9aac-465c-b6f3-aaa10c579d34">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails inspinia-rails-seed-master_modify: test" uuid="24e32ac3-edb3-4bf1-9756-7916bf807bcc">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails inspinia-rails-seed-master_modify: production" uuid="97d7b465-e12c-417d-bd8b-46d39ed24bf6">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

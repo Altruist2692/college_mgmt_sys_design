@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2892334244">
+    <data-source source="LOCAL" name="Rails inspinia-rails-seed-master_modify: development" uuid="072f8b34-9aac-465c-b6f3-aaa10c579d34">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/mgmt_dev</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails inspinia-rails-seed-master_modify: test" uuid="24e32ac3-edb3-4bf1-9756-7916bf807bcc">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/mgmt_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails inspinia-rails-seed-master_modify: production" uuid="97d7b465-e12c-417d-bd8b-46d39ed24bf6">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/mgmt_pro</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

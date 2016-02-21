@@ -1,0 +1,108 @@
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content mailbox-content">
+          <div class="file-manager">
+            <a class="btn btn-block btn-primary compose-mail" href="#">Compose Mail</a>
+            <div class="space-25"></div>
+            <h5>Folders</h5>
+            <ul class="folder-list m-b-md" style="padding: 0">
+              <li><a href="#"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning pull-right">16</span> </a></li>
+              <li><a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a></li>
+              <li><a href="#"> <i class="fa fa-certificate"></i> Important</a></li>
+              <li><a href="#"> <i class="fa fa-file-text-o"></i> Drafts <span class="label label-danger pull-right">2</span></a></li>
+              <li><a href="#"> <i class="fa fa-trash-o"></i> Trash</a></li>
+            </ul>
+
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9 animated fadeInRight">
+      <div class="mail-box-header">
+        <div class="pull-right tooltip-demo">
+          <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to draft folder"><i class="fa fa-pencil"></i> Draft</a>
+          <a href="#" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i> Discard</a>
+        </div>
+        <h2>
+          Compse mail
+        </h2>
+      </div>
+      <div class="mail-box">
+
+
+        <div class="mail-body">
+          <form class="form-horizontal" method="get">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Select Class</label>
+
+              <div class="col-sm-10">
+                <select class="form-control m-b" name="account">
+                  <option>class 1</option>
+                  <option>class 2</option>
+                  <option>class 3</option>
+                  <option>class 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Select Test</label>
+              <div class="col-sm-10">
+                <select class="form-control m-b" name="account">
+                  <option>Test 1</option>
+                  <option>Test 2</option>
+                  <option>Test 3</option>
+                  <option>Test 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Subject:</label>
+              <div class="col-sm-10"><input type="text" class="form-control" value=""></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="mail-text h-200">
+
+          <div class="summernote">
+            <h3>Hello Daxesh! </h3>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            <br />
+            <br />
+
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="mail-body text-right tooltip-demo">
+          <a href="#" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Send"><i class="fa fa-reply"></i> Send</a>
+          <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Discard email"><i class="fa fa-times"></i> Discard</a>
+          <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to draft folder"><i class="fa fa-pencil"></i> Draft</a>
+        </div>
+        <div class="clearfix"></div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+
+    <script type="text/javascript">
+
+
+        $(function() {
+
+            $('.summernote').summernote();
+
+        });
+
+    </script>
+
+<% end %>
