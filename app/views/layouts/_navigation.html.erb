@@ -44,6 +44,37 @@
                     <li class="<%= is_active_action('morris') %>"><%= link_to "Test Marks",  staff_enter_marks_path %></li>
                 </ul>
             </li>
+          <li>
+            <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Accounts</span><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+              <li>
+                <a href="#">Fee Particulars<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                  <li>
+                    <%= link_to "Enter New Fee", accounts_create_fee_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Fee Payment",  accounts_fee_payments_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Fees Report", accounts_fee_reports_path %>
+                  </li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="#">Salary Particulars<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                  <li>
+                    <%= link_to "Enter New Salary",  staff_enter_attendance_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Salary Payment",  staff_enter_attendance_path  %>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
 
     </div>
