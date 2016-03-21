@@ -13,4 +13,10 @@ class AccountsController < ApplicationController
 
   def fee_reports
   end
+
+  def create_salary
+  end
+
+  def salary_payments
+  end
 end

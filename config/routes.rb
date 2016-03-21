@@ -24,6 +24,8 @@ Myapp::Application.routes.draw do
   get "accounts/fee_reports"
   get "accounts/generate_invoice"
   get "accounts/invoice_print"
+  get "accounts/create_salary"
+  get "accounts/salary_payments"
 
   get "admin/index"
 
