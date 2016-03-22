@@ -19,4 +19,17 @@ class StaffController < ApplicationController
 
   def apply_leave
   end
+
+  def create
+  end
+
+  def upload
+  end
+
+  def modify
+  end
+
+  def delete
+  end
+
 end

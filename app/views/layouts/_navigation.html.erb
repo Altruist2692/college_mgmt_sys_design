@@ -29,6 +29,75 @@
                     IN+
                 </div>
             </li>
+          <li>
+            <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Admin Section</span><span class="fa arrow"></span></a>
+            <ul class="nav nav-second-level">
+              <li>
+                <a href="#">Academics<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                  <li>
+                    <%= link_to "Create Branch", academics_branch_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Create Subject", academics_subject_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Create Class",  academics_student_class_path %>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Staff <span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                  <li>
+                    <%= link_to "Add New Member",  staff_create_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Upload Details",  staff_upload_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Modify Member",  staff_modify_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Delete Member",  staff_delete_path %>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Students<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                  <li>
+                    <%= link_to "Add New Student",  students_create_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Upload Details",  students_upload_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Modify Member",  students_modify_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Promote Students",  students_promote_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Delete Student",  students_delete_path  %>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Time Table<span class="fa arrow"></span></a>
+                <ul class="nav nav-third-level">
+                  <li>
+                    <%= link_to "Create TimeTable",  time_tables_create_path  %>
+                  </li>
+                  <li>
+                    <%= link_to "Modify TimeTable",  time_tables_modify_path  %>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+
             <li class="<%= is_active_controller('dashboards') %>">
                 <a href=""><i class="fa fa-th-large"></i> <span class="nav-label">Student Section</span> <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level <%= is_active_controller('dashboards') %>">
@@ -60,17 +129,6 @@
                     <%= link_to "Fees Report", accounts_fee_reports_path %>
                   </li>
 
-                </ul>
-              </li>
-              <li>
-                <a href="#">Salary Particulars<span class="fa arrow"></span></a>
-                <ul class="nav nav-third-level">
-                  <li>
-                    <%= link_to "Enter New Salary", accounts_create_salary_path %>
-                  </li>
-                  <li>
-                    <%= link_to "Salary Payment", accounts_salary_payments_path %>
-                  </li>
                 </ul>
               </li>
               <li>

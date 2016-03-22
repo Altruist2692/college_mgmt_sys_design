@@ -32,11 +32,14 @@ Myapp::Application.routes.draw do
   get "academics/index"
   get "academics/branch"
   get "academics/subject"
-  get "academics/class"
+  get "academics/student_class"
 
   get "students/create"
   get "students/upload"
   get "students/modify"
   get "students/promote"
   get "students/delete"
+
+  get "time_tables/create"
+  get "time_tables/modify"
 end
