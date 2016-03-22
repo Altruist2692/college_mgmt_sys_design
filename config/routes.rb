@@ -53,4 +53,9 @@ Myapp::Application.routes.draw do
   get "hods/staff_approve_attendance"
   get "hods/meeting_call"
 
+  get "principals/index"
+  get "principals/meeting_call"
+  get "principals/staff_approve_attendance"
+  get "principals/students_details"
+
 end
