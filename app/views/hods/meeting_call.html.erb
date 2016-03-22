@@ -1,26 +1,27 @@
+<div class="row wrapper borde0r-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Call For Meeting</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a>H.O.D</a>
+      </li>
+      <li class="active">
+        <strong>Call For Meeting</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2">
+  </div>
+</div>
+
 <div class="wrapper wrapper-content">
   <div class="row">
-    <div class="col-lg-3">
-      <div class="ibox float-e-margins">
-        <div class="ibox-content mailbox-content">
-          <div class="file-manager">
-            <a class="btn btn-block btn-primary compose-mail" href="#">Compose Mail</a>
-            <div class="space-25"></div>
-            <h5>Folders</h5>
-            <ul class="folder-list m-b-md" style="padding: 0">
-              <li><a href="#"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning pull-right">16</span> </a></li>
-              <li><a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a></li>
-              <li><a href="#"> <i class="fa fa-certificate"></i> Important</a></li>
-              <li><a href="#"> <i class="fa fa-file-text-o"></i> Drafts <span class="label label-danger pull-right">2</span></a></li>
-              <li><a href="#"> <i class="fa fa-trash-o"></i> Trash</a></li>
-            </ul>
-
-            <div class="clearfix"></div>
-          </div>
-        </div>
-      </div>
+    <div class="col-lg-2">
     </div>
-    <div class="col-lg-9 animated fadeInRight">
+    <div class="col-lg-8 animated fadeInRight">
       <div class="mail-box-header">
         <div class="pull-right tooltip-demo">
           <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top" title="Move to draft folder"><i class="fa fa-pencil"></i> Draft</a>
@@ -36,25 +37,14 @@
         <div class="mail-body">
           <form class="form-horizontal" method="get">
             <div class="form-group">
-              <label class="col-sm-2 control-label">Select Class</label>
+              <label class="col-sm-2 control-label">Select Member</label>
 
               <div class="col-sm-10">
                 <select class="form-control m-b" name="account">
-                  <option>class 1</option>
-                  <option>class 2</option>
-                  <option>class 3</option>
-                  <option>class 4</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-2 control-label">Select Test</label>
-              <div class="col-sm-10">
-                <select class="form-control m-b" name="account">
-                  <option>Test 1</option>
-                  <option>Test 2</option>
-                  <option>Test 3</option>
-                  <option>Test 4</option>
+                  <option>Member 1</option>
+                  <option>Member 2</option>
+                  <option>Member 3</option>
+                  <option>Member 4</option>
                 </select>
               </div>
             </div>
@@ -89,13 +79,22 @@
 
       </div>
     </div>
+    <div class="col-lg-2">
+    </div>
   </div>
 </div>
 
 <% content_for :javascript do %>
+
     <script type="text/javascript">
+
+
         $(function() {
+
             $('.summernote').summernote();
+
         });
+
     </script>
+
 <% end %>

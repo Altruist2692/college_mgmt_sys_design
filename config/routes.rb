@@ -42,4 +42,15 @@ Myapp::Application.routes.draw do
 
   get "time_tables/create"
   get "time_tables/modify"
+
+  get "hods/index"
+  get "hods/academics_verify_attendance"
+  get "hods/verify_marks"
+  get "hods/check_time_table"
+  get "hods/subject_allocation"
+  get "hods/cancel_class_work"
+  get "hods/students_details"
+  get "hods/staff_approve_attendance"
+  get "hods/meeting_call"
+
 end

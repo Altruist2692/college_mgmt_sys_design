@@ -142,10 +142,47 @@
                   </li>
                 </ul>
               </li>
-
             </ul>
           </li>
+            <li>
+              <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">H.O.D Section</span><span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level">
+                <li>
+                  <a href="#">Academics<span class="fa arrow"></span></a>
+                  <ul class="nav nav-third-level">
+                    <li>
+                      <%= link_to "Check Time Table",   hods_check_time_table_path   %>
+                    </li>
+                    <li>
+                      <%= link_to "Subject Allocation",   hods_subject_allocation_path   %>
+                    </li>
+                    <li>
+                      <%= link_to "Cancel Class Work",   hods_cancel_class_work_path   %>
+                    </li>
+                    <li>
+                      <%= link_to "Verify Marks",  hods_verify_marks_path   %>
+                    </li>
+                    <li>
+                      <%= link_to "Verify Attendance",   hods_academics_verify_attendance_path  %>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Staff <span class="fa arrow"></span></a>
+                  <ul class="nav nav-third-level">
+                    <li>
+                      <%= link_to "Call For Meeting", hods_meeting_call_path %>
+                    </li>
+                    <li>
+                      <%= link_to "Approve Attendance", hods_staff_approve_attendance_path %>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <%= link_to "Student Details", hods_students_details_path %>
+                </li>
+              </ul>
+            </li>
         </ul>
-
     </div>
 </nav>
