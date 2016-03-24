@@ -1,0 +1,395 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Result Analysis</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a>Examiner</a>
+      </li>
+      <li class="active">
+        <strong>Result Analysis</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2">
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-5">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="ibox float-e-margins">
+      </div>
+    </div>
+    <div class="col-lg-4">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Result Analysis <small>Select Class, Exam and Generate Report</small></h5>
+          <div class="ibox-tools">
+            <a class="collapse-link">
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-wrench"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">Config option 1</a>
+              </li>
+              <li>
+                <a href="#">Config option 2</a>
+              </li>
+            </ul>
+            <a class="close-link">
+              <i class="fa fa-times"></i>
+            </a>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <form method="get" class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Select Class</label>
+
+              <div class="col-sm-10">
+                <select class="form-control m-b" name="account">
+                  <option>class 1</option>
+                  <option>class 2</option>
+                  <option>class 3</option>
+                  <option>class 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Select Exam</label>
+
+              <div class="col-sm-10">
+                <select class="form-control m-b" name="account">
+                  <option>Exam 1</option>
+                  <option>Exam 2</option>
+                  <option>Exam 3</option>
+                  <option>Exam 4</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn btn-white" type="submit">Cancel</button>
+                <button class="btn btn-primary" type="submit">Generate Report</button>
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group" id="data_5">
+              <label class="col-sm-2 control-label">Select Date</label>
+              <div class="col-sm-10">
+                <div class="input-daterange input-group" id="datepicker">
+                  <input type="text" class="input-sm form-control" name="start" value="05/14/2014" />
+                  <span class="input-group-addon">to</span>
+                  <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn btn-white" type="submit">Cancel</button>
+                <button class="btn btn-primary" type="submit">Generate Report</button>
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+          </form>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                  <h5>
+                    Average Result
+                    <small>With other class comparision.</small>
+                  </h5>
+                  <div ibox-tools></div>
+                </div>
+                <div class="ibox-content">
+                  <div>
+                    <canvas id="lineChart" height="140"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                  <h5>Year wise comparision</h5>
+                </div>
+                <div class="ibox-content">
+                  <div>
+                    <canvas id="barChart" height="140"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                  <h5>Result in percentage</h5>
+                </div>
+                <div class="ibox-content">
+                  <div class="text-center">
+                    <canvas id="polarChart" height="140"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                  <h5>Ovrall Result</h5>
+                </div>
+                <div class="ibox-content">
+                  <div>
+                    <canvas id="doughnutChart" height="140"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% content_for :javascript do %>
+
+    <script type="text/javascript">
+        $(function() {
+
+            var lineData = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "Example dataset",
+                        fillColor: "rgba(220,220,220,0.5)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [65, 59, 80, 81, 56, 55, 40]
+                    },
+                    {
+                        label: "Example dataset",
+                        fillColor: "rgba(26,179,148,0.5)",
+                        strokeColor: "rgba(26,179,148,0.7)",
+                        pointColor: "rgba(26,179,148,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(26,179,148,1)",
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    }
+                ]
+            };
+
+            var lineOptions = {
+                scaleShowGridLines: true,
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                scaleGridLineWidth: 1,
+                bezierCurve: true,
+                bezierCurveTension: 0.4,
+                pointDot: true,
+                pointDotRadius: 4,
+                pointDotStrokeWidth: 1,
+                pointHitDetectionRadius: 20,
+                datasetStroke: true,
+                datasetStrokeWidth: 2,
+                datasetFill: true,
+                responsive: true,
+            };
+
+
+            var ctx = document.getElementById("lineChart").getContext("2d");
+            var myNewChart = new Chart(ctx).Line(lineData, lineOptions);
+
+            var barData = {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        fillColor: "rgba(220,220,220,0.5)",
+                        strokeColor: "rgba(220,220,220,0.8)",
+                        highlightFill: "rgba(220,220,220,0.75)",
+                        highlightStroke: "rgba(220,220,220,1)",
+                        data: [65, 59, 80, 81, 56, 55, 40]
+                    },
+                    {
+                        label: "My Second dataset",
+                        fillColor: "rgba(26,179,148,0.5)",
+                        strokeColor: "rgba(26,179,148,0.8)",
+                        highlightFill: "rgba(26,179,148,0.75)",
+                        highlightStroke: "rgba(26,179,148,1)",
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    }
+                ]
+            };
+
+            var barOptions = {
+                scaleBeginAtZero: true,
+                scaleShowGridLines: true,
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                scaleGridLineWidth: 1,
+                barShowStroke: true,
+                barStrokeWidth: 2,
+                barValueSpacing: 5,
+                barDatasetSpacing: 1,
+                responsive: true,
+            }
+
+
+            var ctx = document.getElementById("barChart").getContext("2d");
+            var myNewChart = new Chart(ctx).Bar(barData, barOptions);
+
+            var polarData = [
+                {
+                    value: 300,
+                    color: "#a3e1d4",
+                    highlight: "#1ab394",
+                    label: "App"
+                },
+                {
+                    value: 140,
+                    color: "#dedede",
+                    highlight: "#1ab394",
+                    label: "Software"
+                },
+                {
+                    value: 200,
+                    color: "#b5b8cf",
+                    highlight: "#1ab394",
+                    label: "Laptop"
+                }
+            ];
+
+            var polarOptions = {
+                scaleShowLabelBackdrop: true,
+                scaleBackdropColor: "rgba(255,255,255,0.75)",
+                scaleBeginAtZero: true,
+                scaleBackdropPaddingY: 1,
+                scaleBackdropPaddingX: 1,
+                scaleShowLine: true,
+                segmentShowStroke: true,
+                segmentStrokeColor: "#fff",
+                segmentStrokeWidth: 2,
+                animationSteps: 100,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false,
+                responsive: true,
+
+            };
+
+            var ctx = document.getElementById("polarChart").getContext("2d");
+            var myNewChart = new Chart(ctx).PolarArea(polarData, polarOptions);
+
+            var doughnutData = [
+                {
+                    value: 300,
+                    color: "#a3e1d4",
+                    highlight: "#1ab394",
+                    label: "App"
+                },
+                {
+                    value: 50,
+                    color: "#dedede",
+                    highlight: "#1ab394",
+                    label: "Software"
+                },
+                {
+                    value: 100,
+                    color: "#b5b8cf",
+                    highlight: "#1ab394",
+                    label: "Laptop"
+                }
+            ];
+
+            var doughnutOptions = {
+                segmentShowStroke: true,
+                segmentStrokeColor: "#fff",
+                segmentStrokeWidth: 2,
+                percentageInnerCutout: 45, // This is 0 for Pie charts
+                animationSteps: 100,
+                animationEasing: "easeOutBounce",
+                animateRotate: true,
+                animateScale: false,
+                responsive: true,
+            };
+
+
+            var ctx = document.getElementById("doughnutChart").getContext("2d");
+            var myNewChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
+
+
+            var radarData = {
+                labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [65, 59, 90, 81, 56, 55, 40]
+                    },
+                    {
+                        label: "My Second dataset",
+                        fillColor: "rgba(26,179,148,0.2)",
+                        strokeColor: "rgba(26,179,148,1)",
+                        pointColor: "rgba(26,179,148,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: [28, 48, 40, 19, 96, 27, 100]
+                    }
+                ]
+            };
+
+            var radarOptions = {
+                scaleShowLine: true,
+                angleShowLineOut: true,
+                scaleShowLabels: false,
+                scaleBeginAtZero: true,
+                angleLineColor: "rgba(0,0,0,.1)",
+                angleLineWidth: 1,
+                pointLabelFontFamily: "'Arial'",
+                pointLabelFontStyle: "normal",
+                pointLabelFontSize: 10,
+                pointLabelFontColor: "#666",
+                pointDot: true,
+                pointDotRadius: 3,
+                pointDotStrokeWidth: 1,
+                pointHitDetectionRadius: 20,
+                datasetStroke: true,
+                datasetStrokeWidth: 2,
+                datasetFill: true,
+                responsive: true,
+            }
+
+            var ctx = document.getElementById("radarChart").getContext("2d");
+            var myNewChart = new Chart(ctx).Radar(radarData, radarOptions);
+
+        });
+
+    </script>
+
+<% end %>
+*

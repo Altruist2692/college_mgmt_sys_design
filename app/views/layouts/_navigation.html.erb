@@ -160,10 +160,10 @@
                       <%= link_to "Cancel Class Work",   hods_cancel_class_work_path   %>
                     </li>
                     <li>
-                      <%= link_to "Verify Marks",  hods_verify_marks_path   %>
+                      <%#= link_to "Verify Marks",  hods_verify_marks_path   %>
                     </li>
                     <li>
-                      <%= link_to "Verify Attendance",   hods_academics_verify_attendance_path  %>
+                      <%#= link_to "Verify Attendance",   hods_academics_verify_attendance_path  %>
                     </li>
                   </ul>
                 </li>
@@ -196,10 +196,10 @@
                       <%= link_to "Cancel Class Work",   hods_cancel_class_work_path   %>
                     </li>
                     <li>
-                      <%= link_to "Verify Marks",  hods_verify_marks_path   %>
+                      <%#= link_to "Verify Marks",  hods_verify_marks_path   %>
                     </li>
                     <li>
-                      <%= link_to "Verify Attendance",   hods_academics_verify_attendance_path  %>
+                      <%#= link_to "Verify Attendance",   hods_academics_verify_attendance_path  %>
                     </li>
                   </ul>
                 </li>
@@ -215,7 +215,55 @@
                   </ul>
                 </li>
                 <li>
-                  <%= link_to "Student Details",   principals_students_details_path   %>
+                  <%= link_to "Student Details", principals_students_details_path   %>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Examiner Section</span><span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level">
+                <li>
+                  <%= link_to "Create Test", examiners_create_test_path %>
+                </li>
+                <li>
+                  <%= link_to "Modify Test", examiners_modify_test_path %>
+                </li>
+                <li>
+                  <%= link_to "Upload Marks", examiners_upload_marks_path %>
+                </li>
+                <li>
+                  <%= link_to "Result Analysis", examiners_result_analysis_path %>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Placement Section</span><span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level">
+                <li>
+                  <%= link_to "Post Message",  placements_post_message_path %>
+                </li>
+                <li>
+                  <%= link_to "Placement Report",  placements_students_report_path  %>
+                </li>
+                <li>
+                  <%= link_to "Student Details", hods_students_details_path %>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-sitemap"></i> <span class="nav-label">Student Section</span><span class="fa arrow"></span></a>
+              <ul class="nav nav-second-level">
+                <li>
+                  <%= link_to "Profile",  staff_profile_path %>
+                </li>
+                <li>
+                  <%= link_to "Marks", students_marks_path %>
+                </li>
+                <li>
+                  <%= link_to "Attendance", students_attendance_path  %>
+                </li>
+                <li>
+                  <%= link_to "Time Table",  students_time_table_path %>
                 </li>
               </ul>
             </li>

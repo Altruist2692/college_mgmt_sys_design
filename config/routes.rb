@@ -39,6 +39,9 @@ Myapp::Application.routes.draw do
   get "students/modify"
   get "students/promote"
   get "students/delete"
+  get "students/time_table"
+  get "students/marks"
+  get "students/attendance"
 
   get "time_tables/create"
   get "time_tables/modify"
@@ -58,4 +61,11 @@ Myapp::Application.routes.draw do
   get "principals/staff_approve_attendance"
   get "principals/students_details"
 
+  get "examiners/create_test"
+  get "examiners/modify_test"
+  get "examiners/upload_marks"
+  get "examiners/result_analysis"
+
+  get "placements/post_message"
+  get "placements/students_report"
 end

@@ -14,4 +14,13 @@ class StudentsController < ApplicationController
 
   def delete
   end
+
+  def marks
+  end
+
+  def time_table
+  end
+
+  def attendance
+  end
 end
